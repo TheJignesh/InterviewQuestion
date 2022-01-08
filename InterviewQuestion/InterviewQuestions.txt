@@ -1,0 +1,112 @@
+Projects Info architect
+
+Dev Extereme front end component
+
+3 years 
+current project web api
+c# -> 
+MVC -> 
+Web API -> 
+Sql -> 
+Javascript -> 
+AngularJS
+
+Oops - Interface & abstract class, 2 Interface question, Abstraction & encapsulation, Virtual methods, Diffrence between Const & Readonly, pure abstract class, Protected & internal, Polymorphism
+What is Boxing/Unboxing -> N
+What is Managed or Unmanaged Code -> N
+Can “this” be used within a static method -> N
+What is extension method in c# and how to use them?
+what is the difference between dispose and finalize methods in c#?
+Var & dynamic -> N
+IQuerable and IEnumerable -> N later to be discussed
+Exception Program
+Generics -> N
+SOLID principles -> N
+Dependency injection? Where to handle it? -> N
+
+MVC 
+State Management -> N
+filters
+Routing
+Get parameters
+Exception handling 
+Bundling Minification 
+CSRF Attack
+NonAction 
+Data annotation
+
+LinQ
+Entity Framework- Diffrent approaches for EF
+Repository pattern UnitOfWork, First, Single, Lazy loading & Eager loading, Databasecontext,
+Where do we specify connection string in EF
+
+Web API
+Diffrence between APicontroller and controller
+Diffrence between the WCF & Web API
+What is CORS & How to resolve this issue Cross Origin Resource sharing
+What are the Advantages of Using ASP.NET Web API?
+How to Restrict Access to Web API Method to Specific HTTP Verb?
+How to Return View from ASP.NET Web API Method?
+How Can We Provide an Alias Name for ASP.NET Web API Action?
+
+SQL
+Views
+SP
+Functions 
+Difference b\n SP & Functions
+Joins
+Magic table
+Triggers
+difference delete & truncate
+diff b\n pk & unique key
+
+Javascript
+difference b\n arrorw func & normal func.
+diff b\n var, let & const
+
+Jquery - Selectors
+
+Angular.js
+What is the difference between AngularJS and jQuery?
+Why are we using AngularJS and what are the advantages of AngularJS?
+Explain ng-app directive.
+What is $scope in AngularJS
+What is $rootscope and how do we use it
+How to implement routing in AngularJS
+What are the services in AngularJS
+What are the custom directives in AngularJS
+Difference between ng-if and ng-show?
+how controllers communicate with each other? emit ,broadcast
+have you created any directive in angular?
+latest version of angular? angular 5 (Pentagonal Donut) b
+Fat Arrow functions? ES6
+How many types of data binding in AngularJS?
+
+ReactJS
+
+Diffn b\n class component and functional component?
+What is the difference between state and props?
+What is Redux
+Is setState() is async? 
+
+Code maintainance 
+
+Mvc page life cycle
+Routing
+How to handle sessions in MVC/Difference between viwebag n viewdata
+Use of tempdata
+Types of Filters
+What are filters? Custom filters
+What is trigger n it's types
+What is table valued function in sql
+Scalar value function in sql
+Return type of controller action methods
+Functionality of route config and bundle config
+Methods involved in global.aspx
+Web config connection string parameters
+Stored procedure optimization
+Area in mvc
+What is partial view and it's functionality
+syntax to write partial view
+Exception handle in sql
+How do you handle authentication in Web Api's 

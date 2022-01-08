@@ -1,0 +1,73 @@
+﻿
+@{
+    ViewBag.Title = "AddNewContact";
+}
+
+    <div class="form-horizontal">
+        <h4>Add New Contact</h4>
+        <hr />
+
+        <div class="form-group">
+            <label class="control-label col-md-2">First Name :</label>
+            <div class="col-md-10">
+                <input type="text" class="form-control" />
+                <label class="text-danger"></label>
+            </div>
+
+            <label class="control-label col-md-2">Last Name :</label>
+            <div class="col-md-10">
+                <input type="text" class="form-control" />
+                <label class="text-danger"></label>
+            </div>
+
+            <label class="control-label col-md-2">Email Address :</label>
+            <div class="col-md-10">
+                <input type="text" class="form-control" />
+                <label class="text-danger"></label>
+            </div>
+
+            <label class="control-label col-md-2">User Name :</label>
+            <div class="col-md-10">
+                <input type="text" class="form-control" />
+                <label class="text-danger"></label>
+            </div>
+
+            <label class="control-label col-md-2">Password :</label>
+            <div class="col-md-10">
+                <input type="text" class="form-control" />
+                <label class="text-danger"></label>
+            </div>
+
+            <label class="control-label col-md-2">Confirm Password :</label>
+            <div class="col-md-10">
+                <input type="text" class="form-control" />
+                <label class="text-danger"></label>
+            </div>
+
+            <label class="control-label col-md-2">Phone No. :</label>
+            <div class="col-md-10">
+                <input type="text" class="form-control" />
+                <label class="text-danger"></label>
+            </div>
+
+            <label class="control-label col-md-2">Address :</label>
+            <div class="col-md-10">
+                <input type="text" class="form-control" />
+                <label class="text-danger"></label>
+            </div>
+
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+

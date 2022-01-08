@@ -1,0 +1,190 @@
+https://dotnettutorials.net/lesson/inheritance-c-sharp/
+============================ X ======================= X ================================ X ==================================	
+Good morning Sir/Madam,
+First of all, thank you for giving me this oppurtunity to
+introduce myself.
+My name is [Full Name].
+I am Currently staying in mumbai.
+I did my graduation in BSC.IT. from mumbai university.
+Currently I am working in Softlabs Group which located in lower parel.
+I have worked on and working on projects using C#, .net framework mvc 5, MS Sql and MySql.
+and also I have worked on .net core 3.1 and Docker for short term of period like 1 - 2 weeks only.
+and for version controlling previously we were using TFS but we are moved to GitLab.
+So, these all are my technical skill.
+This is all about me.					
+
+============================ X ======================= X ================================ X ==================================
+I’ve enjoyed my role a lot in my current company, 
+but I’ve been here for 3 years and now I feel it’s time to challenge myself and to grow my career further 
+so that's why I'm looking for the change, that can help me to build my career and skills on a larger scale and
+also want to experience a new work environment.
+============================ X ======================= X ================================ X ==================================
+mvc version
+Sql version
+
+viewmodel
+model
+viewmodel vs model
+
+routing
+why it is used for ?
+
+asyn and await
+
+filters and types
+action filter
+Cases whend & where you can implement filters
+
+Error or Exception handling
+https://stackify.com/aspnet-mvc-error-handling/
+https://www.c-sharpcorner.com/uploadfile/mscratnesh/exception-handling-in-mvc/
+
+Where do you write you bussiness logic ?
+Areas in MVC
+viewbag & viewdata & tempdata (peek and keep)
+cache in mvc
+
+dependecy injection and it's advantages
+
+what is your role in projects
+
+varchar vs nvarchar
+cursors
+triggers
+why do we use it ?
+delete duplicate entries from the records.
+day to day activities 
+
+Html helpers
+
+bind dropdown list 
+
+how do you validate forms ?
+
+data annotation
+
+dynamic & var
+
+extension method in c#
+list of extension methods in linq
+any in linq
+
+which datatype will use to store multi-language character and special character
+row_number, rank, dense_rank
+local temp table vs globle temp table
+
+types of UDF 
+select count(*) + count(*) - output ?
+
+how will you apply class to div using jquery ?
+alternative ways
+
+attr prop
+
+includes
+
+bind event handler in jquery?
+
+
+============================ X ======================= X ================================ X ==================================
+
+SP VS Functions
+Truncate vs Delete
+Where vs Having
+Primary key vs Unique key
+Union and union all
+Triggers
+Magic tables
+Views
+Joins
+CTE
+temp table vs temp table variable
+Constraints & Types of constraints
+
+http://localhost:29980/api/Request/WBS/72/75/null/null/null/null/null/null/null/null/null/1
+
+============================ X ======================= X ================================ X ==================================
+
+Database
+DBMS
+RDBMS
+Interview questions on Database, DBMS, RDBMS
+
+Sql Commands : DDL DML DCL TCL DQL
+Explanation of each commands with examples.
+Interview questions
+
+Constraints
+Joins
+View
+Index
+Triggers along with magic tables
+Functions
+Stored Procedures
+
+
+Technologies supported by the .NET framework are as follows
+
+ASP.NET (Active Server Pages.NET)
+ADO.NET (Active Data Object.NET)
+WCF (Windows Communication Foundation)
+WPF (Windows Presentation Foundation)
+WWF (Windows Workflow Foundation)
+AJAX (Asynchronous JavaScript and XML)
+LINQ (Language Integrated Query)
+ASP.NET MVC (Model View Controller)
+ASP.NET WEB API
+.NET Core
+
+
+
+SQL	No-SQL
+1. SQL is a relational database management system.	
+1. While No-SQL is a non-relational or distributed database management system.
+
+2. The query language used in this database system is a structured query language.	
+2. The query language used in the No-SQL database systems is a non-declarative query language.
+
+3. The schema of SQL databases is predefined, fixed, and static.	
+3. The schema of No-SQL databases is a dynamic schema for unstructured data.
+
+4. These databases are vertically scalable.	
+4. These databases are horizontally scalable.
+
+5. The database type of SQL is in the form of tables, i.e., in the form of rows and columns.	
+5. The database type of No-SQL is in the form of documents, key-value, and graphs.
+
+6. It follows the ACID model.	
+6. It follows the BASE model.
+
+7. Complex queries are easily managed in the SQL database.	
+7. NoSQL databases cannot handle complex queries.
+
+8. This database is not the best choice for storing hierarchical data.	
+8. While No-SQL database is a perfect option for storing hierarchical data.
+
+9. All SQL databases require object-relational mapping.	
+9. Many No-SQL databases do not require object-relational mapping.
+
+10. Gauges, CircleCI, Hootsuite, etc., are the top enterprises that are using this query language.	
+10. Airbnb, Uber, and Kickstarter are the top enterprises that are using this query language.
+
+11. SQLite, Ms-SQL, Oracle, PostgreSQL, and MySQL are examples of SQL database systems.	
+11. Redis, MongoDB, Hbase, BigTable, CouchDB, and Cassandra are examples of NoSQL database systems.
+
+
+What is mvc ***
+Life cycle of mvc ***
+Routing in mvc ***
+Filters ***
+Ares ***
+View bag viewdata and tempdata ***
+Types of actionresult *** 
+Bundling and munification ***
+Html helpers 
+Partial view
+
+https://www.monsterindia.com/career-advice/10-mvc-interview-questions-for-asp-net-developers-7893.html
+https://www.dotnettricks.com/learn/mvc/top-20-mvc-interview-questions-answers
+
+============================ X ======================= X ================================ X ==================================	

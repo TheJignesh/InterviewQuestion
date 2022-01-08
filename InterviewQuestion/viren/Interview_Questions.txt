@@ -1,0 +1,348 @@
+1- How to call same action method when on view multiple submit button %--->Request['Update']
+
+2- How to call multiple model on a single view%--->student , customer list of student in customer.
+
+3- How to call multiple action method when have multiple submit button on view--->formaction=  insubmit
+E.g:-
+ <input type="submit" name="save" value="Save" 
+              formaction="SaveForm" formmethod="post" />
+    <input type="submit" name="cancel" value="Cancel" 
+              formaction="CancelForm" formmethod="post" />
+
+4- Select 1
+5- Select 1+null
+6- Select (select 1)
+7- Select count(1) from employees
+7- Select 1+1
+8- Select 1+'a'
+9- What is null if
+10-What's scheduler
+11-Why use static class
+12-What's Solid principal
+13-What's forgery token
+14-Why use view in SQL server
+15-How to pass data table to procedure
+16-Types of key in sql---Primary ,Unique,Foregin 
+17-Transaction in sql  -- COMMIT, ROLLBACK,SAVEPOINT
+18-Schema in sql.
+19-Materialized View.
+20-Difference between Executenonquery,Executescalar and Executereader in c#--->SqlCommand in ado.net - Part 4
+21-how to get the last generated id from table-->Scopeidentity--->How to get the last generated identity column value in SQL Server - Part 8
+
+How to pass table as parameter in sp 
+1.Table valued parameters in SQL Server -->youtube
+2.Send datatable as parameter to stored procedure -->youtube
+
+
+
+CREATE TYPE CarTableType AS TABLE
+(
+     Id int primary key,
+    Name nvarchar(50),
+    company nvarchar(50)
+)
+
+
+16-How to pass XML as a parameter to procedure
+declare @xml xml =
+'<Employees>  
+    <Employee Id ="1">  
+        <Name>Sagar Shinde</Name>  
+        <Country>United States</Country>  
+        <Others>  
+            <Role>TL</Role>  
+            <Level>1</Level>  
+        </Others>  
+    </Employee>  
+    <Employee Id = "2">  
+        <Name>Swapnil Shinde</Name>  
+        <Country>India</Country>  
+        <Others>  
+            <Role>AM</Role>  
+            <Level>2</Level>  
+        </Others>  
+    </Employee>  
+    <Employee Id ="3">  
+        <Name>Pankaj Shinde</Name>  
+        <Country>France</Country>  
+        <Others>  
+            <Role>SSE</Role>  
+            <Level>3</Level>  
+        </Others>  
+    </Employee>  
+</Employees>'
+
+INSERT INTO EmployeeDetails  
+SELECT  
+
+detail.value('(Name/text())[1]','VARCHAR(100)') AS Name, --TAG  
+detail.value('(Country/text())[1]','VARCHAR(100)') AS Country --TAG  
+
+FROM  
+@xml.nodes('/Employees/Employee')AS Emp(detail) 
+
+
+
+17- Is it possible to perform update query in function--> No only select query.
+18- Types of function
+19- Difference between cluster and non cluster index
+20- What's trigger
+21- Is it possible to update view
+22- Write a query to display yesterday date
+23- Write a query to display day after tomorrow date
+24-Write a query to delete duplicate records
+25-Write a query to find nth highst salary
+26-Write a query to update gender column male with  
+   M and female with F
+
+27-In which scinerio we can only use action result%
+
+28-Overloading is possible in controller,If yes how if no why%--use ActionName to do overloading in mvc controller-->Can we overload MVC Action methods ? ( MVC interview questions)
+
+30-How to pass data from controller to view and how many ways to pass data from controller to view
+31-How to pass data from view to controller                                 
+32-Write a jQuery function for validate text box from cut copy past
+
+33-Can I use multiple render body%  -->only one render body per layout page
+
+34-What's difference between pratial and render partial--> render partial returns void
+35-What's HTML halper
+36-What's view engine
+37-What's razor view engine
+38-Why we use razor view engine 39-when we have aspx view
+engine
+40-Is it possible to create user difiend halper%--->custom helper/Inline Helper(search in youtube)
+41-What's dependency injection
+42-What bundling and minification
+
+
+43- What's state management in mvc%
+
+
+44-Tell return types of action method
+45-What's CLR
+46-Life cycle of mvc
+47-What's attribute routing
+
+48-Is it mendotory to mention a route of all action method in route config%--->not mandatory
+
+49-What's filter
+50-Which filters are used in your project explain
+51-What's error handle and what's use of that
+52-Explain routing          
+53-Can I give same name to multiple route%--->NO
+54-What's route constraints-->https://www.dotnettricks.com/learn/mvc/route-constraints-in-aspnet-mvc-with-example
+
+
+
+
+55.Select invalid authentication mode in SQL Server
+--There is only Two authentication mode that supports in SQL Server
+--Windows Authentication
+--Mixed Authentication
+
+
+DML:- Data Manipultation Lang (insert ,update, delete)
+DQL:-Data Query Lang (Select)
+DCL:- Data control Lang (Grant, Revoke)
+DDL:- Data Definetion lang (Create, Alter, Truncate)
+TCL:- Transact Control Lang(Commit, rollback, savetransaction)
+
+
+How to implement Error Handler in Stored procedure
+also search for @@TRANSCOUT
+BEGIN TRY
+*Query
+IF  @@TRANSCOUT > 0
+COMMIT;
+END TRY
+
+BEGIN CATCH 
+*Catch the error and save it in table
+IF  @@TRANSCOUT > 0
+ROLLBACK;
+END CATCH
+
+
+Indexes:-
+
+Create Index IndexName
+on TableName (ColumnName desc)
+
+Primary key automatically create Clustered index on table 
+There is only one Clustered Index on table
+ 
+Create Clustered Index IndexName
+on TableName (ColumnName1 desc,ColumnName2 desc)
+
+Non clustered Index is save indexes in another table and data on other table
+
+
+Functions:- https://www.youtube.com/watch?v=EgYW7tsNP6g&ab_channel=kudvenkat
+
+Types:-
+System defined function
+sub types:- scalar function, aggregate function
+
+User defined function
+
+Subtypes:-
+Scalar Function:-
+It only returns scalar value like count etc.
+
+Create function FunctionName(@parma1,@param2)
+Return returndatatype
+as
+begin
+*query
+return returndatatype
+end
+
+Inlinetable valued funtion
+
+Create function FunctionName(@parma1,@param2)
+Return table
+As
+return(select Id,Name from tablename);
+
+
+
+Multilinetablevalued function
+  
+Create function FunctionName(@parma1,@param2)
+Return @table table (id int,Name nvarchar(20), dob date) -- defined table variable
+as
+beign
+insert into @table
+select id,name,DOB from tablename
+
+Return
+end 
+
+
+
+
+Temporary Tables:- https://www.youtube.com/watch?v=oGuS1rdfaMI&ab_channel=kudvenkat
+
+1. Local temporary tables
+2. Global temporary tables
+
+Local temporary table
+
+Create table #mytable(Id int,Name nvarchar(10))
+
+local temp table is only available for one connection 
+as soon as connection is closed it got dropped automatically
+
+ Global temporary tables
+Create table ##mytable(Id int,Name nvarchar(10))
+
+local temp table is available for all connection 
+as soon as all connection is closed it got dropped automatically
+
+
+Triggers:-
+
+DML   Triggers
+DDL  Triggers
+Logon Triggers
+
+DML Trigger:-
+After trigger
+Instead of Trigger
+
+After Trigger
+---------------------
+create trigger triggerName
+on tableName
+For Insert    --- 
+as
+begin
+Declare  @id int
+
+select @id = id from Inserted --->magic table (Inserted,Deleted)
+
+end;
+
+
+
+Instead of Triggers:-
+---------------------
+create trigger triggerName
+on tableName
+Instead of Insert    ----
+as
+begin
+Declare  @id int
+
+select @id = id from Inserted --->magic table (Inserted,Deleted)
+
+end;
+
+
+
+WITH NO LOCK:- https://www.youtube.com/watch?v=sbBFHFxxE1Y&ab_channel=PinalDave
+
+why stored procedure is called as precompiled
+Answer
+When we create and execute the stored procedure for the first time it creates an ExecutionPlan
+Execution plan means which is the best and quickiest way to get the data, so when stored procedure 
+is created it has an execution plan, now but after subsquent runs since stored procedure has the 
+execution plan it will get the data quickly as soon as possible hence that's why it is called 
+pre-compiled 
+
+
+How to validate textbox based on checkbox using dataannotation attribute:- need to create custom attribute
+
+what is application pool in iis:- https://www.youtube.com/watch?v=JJmURky86-Q&ab_channel=kudvenkat
+
+ --->application pools contains more than one web application, each application pool 
+    has its own worker process
+Application pools allow you to isolate your applications from one another, 
+even if they are running on the same server. 
+This way, if there is an error in one app, it won't take down other applications
+
+Additionally, applications pools allow you to separate
+different apps which require different levels of security.
+
+
+
+is inlinetablevalued function can be used in joins --> No
+
+JWT Token sperated into how many parts--->header(sha256),payload(data),secret
+
+Vivek@gmail.com
+which sql function is used to get the position of @--->CharIndex(chartofind,stringvalue,position from which it should start count)
+SELECT CHARINDEX('mer', 'Customer', 5) from 5th postion it will starts counting
+--> 6
+SELECT CHARINDEX('mer', 'Customer', 7) 
+-->0
+
+
+
+Display even numbers
+
+Select studentId from (Select rowno, studentId from student) where mod(rowno,2)=0
+
+Odd Numbers
+Select studentId from (Select rowno, studentId from student) where mod(rowno,2)=1
+
+
+Composite Key:-
+---------------
+having primary key on more than two columns
+CREATE TABLE SAMPLE_TABLE  
+(COL1 integer,  
+COL2 varchar(30),  
+COL3 varchar(50),  
+PRIMARY KEY (COL1, COL2));  ----> Primary Key on two columns
+
+
+
+Foregin Key:-
+-------------
+CREATE TABLE Orders (
+    OrderID int NOT NULL PRIMARY KEY,
+    OrderNumber int NOT NULL,
+    PersonID int FOREIGN KEY REFERENCES Persons(PersonID)
+);    

@@ -1,0 +1,549 @@
+Four pillars of OOPS
+
+Abstraction
+Encapsulation
+Polymorphism
+Inheritance
+
+
+SSL, TLS, HTTP, HTTPS :- https://www.youtube.com/watch?v=hExRDVZHhig&ab_channel=PowerCertAnimatedVideos
+
+SSL:- Secure socket layer
+TLS:- Transport layer security
+HTTPS:-Hyper text transport protocol secure
+HTTP:- Hyper text transport protocol 
+
+
+
+Where vs Having
+Where condition is faster then having
+because Where first filter the rows and then returns while having
+will get the rows first and then filters it
+
+Order of where,groupby,having,orderby
+
+WHERE more filters on the rows
+GROUP BY combines those rows into groups
+HAVING filters groups
+ORDER BY arranges the remaining rows/groups
+
+what is STUFF in sql
+
+select stuff('SQL Javascript',1,3,'HTML')
+ stuff('Text', startpos, length, replaceText)
+Answer
+HTML Javascript
+
+Data Sharding---> Database
+
+Data Annotation ----> when we apply attribute like [Required] to model class for model validation these attributes comes
+from componentmodel.dataAnotation packages
+MVC Aysnc and ThreadStarvation
+(Youtube)What are MVC Asynch controllers and thread starvation ? ( MVC interview questions with answers)
+OR
+(Recommended for how to create async controller)(#71) Async controller in MVC | mvc tutorial for beginners in .net c# | MVC By Nitish
+
+
+
+MVC FORM Authentication--->D:\VIVEK\MVC\MVCFormAuth 
+or
+SP.NET MVC form authentication with role provider | Login & Registration using ASP.NET MVC
+
+what is dependency injection-->(#69) Dependency Injection in MVC 5 | mvc tutorial for beginners in .net c# | MVC By Nitish
+
+How to use dependency injection in mvc ---> https://www.c-sharpcorner.com/article/how-to-implement-dependency-injection-in-mvc-project
+
+
+MVC Life Cycle
+---------------
+When mvc appln starts it first call the application start method in global.ascx file
+in application_start() method all the filters and routes are getting registered for e.g :- 
+(RouteTable.Routes)
+the routes which is defined in the route.config file 
+for e.g:-
+
+            routes.MapRoute(
+                name: "Default",
+                url: "{controller}/{action}/{id}",
+                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+            );
+
+All these routes is present in the RouteTable
+
+The UrlRouting module will check the request url from the client and check whether the given url is matching with any of the routes present 
+in the RouteTable.
+
+There is a handler called as Mvchandler which will select the controller from the list of controllers.
+after that it will execute the specific controller. after executing the controller the actioninvoker  will invoke the action method in that particular
+controller and after execution of action method the viewengine will determine which type of view is to be executed and thus gives the response.
+
+
+
+
+URL Routing
+Learn ASP.NET MVC 5 ( Model view controller) step by step in 2 days ( 16 hours)
+Watch from 25:05
+
+crud opertion in mvc 			
+(Same as in windows and asp.net or in WPF (MVVM format) )			
+			
+wht is entityframework			
+(whatever u do for crud operation,Entity Framework help u to create this automatically  (just watch any video for ref))			
+(Part 25 Insert update delete in mvc using entity framework (CODE VENKAT)--Recommended)			
+			
+crud opertion in entityframework			
+(same as above)			
+			
+			
+Filters in Mvc			
+(			
+Authorization filters	Performs authentication and authorizes before executing action method.	[Authorize], [RequireHttps]	IAuthorizationFilter--Part 70
+Action filters	        Performs some operation before and after an action method executes.		IActionFilter
+Result filters	        Performs some operation before or after the execution of view result.	[OutputCache]	IResultFilter
+Exception filters	Performs some operation if there is an unhandled exception thrown during the execution of the ASP.NET MVC pipeline.	[HandleError]	IExceptionFilter
+TYPES OF ACTION FILTERS--Part 69 onwards
+(
+
+Authorize,
+Childonly,---Only want to invoke when called from another view link using link <a></a>
+handleerror,--->Part 72 HandleError attribute in mvc
+Outputcache,
+Requirehttps,
+ValidateInput,--https://www.youtube.com/watch?v=tFHW6GEfCIE&ab_channel=kudvenkat
+ValidateAntiForgeryToken
+Part 69 Action filters in mvc(code venkat)	
+		
+)			
+
+ActionName part -15 Timing 4:34	-->Can we overload MVC Action methods ? ( MVC interview questions)	
+
+updatemodel part-15			
+
+
+diff between updatemodel and tryupdatemodel part- 16	
+		
+hiddenfor-part-19
+			
+whitelist and blacklist property to update - part 20	
+		
+
+Bind attribute works same as updatemodel - part-21
+			
+achieving whitelist and backlist using interface using updatemodel- part-22
+			
+Delete using get request is not recommended- part 23	
+		
+Deleting data using POST request using @html.beginform - part - 24			
+			
+validation in mvc
+			
+client side and server side
+(
+Server side means (watch video part 83 and 84 )
+U have to give some attributes over the properties in model
+
+Client side means(part 85)
+(U can do validation in javascript and can use by adding jquery.validation.min.js script in view)
+also add this below key in webconfig file
+<configuration>
+  <appSettings>  
+    <add key="ClientValidationEnabled" value="true" />
+    <add key="UnobtrusiveJavaScriptEnabled" value="true" />
+  </appSettings>
+</configuration>
+
+)			
+			
+Areas in MVC -->part 79		
+			
+$.ajax ---> if u want to load only a part of website than ajax is used (Please visit this link:-https://www.c-sharpcorner.com/UploadFile/302f8f/Asp-Net-mvc-using-jquery-ajax/)
+SYNTAX
+
+          $.ajax({  
+                    type: "POST",  ------------> whether u want to post the data or get
+                    url: "/Home/GetSecuredData",  ---->which controller's action method u want to call
+                    contentType: "application/json; charset=utf-8",  ---> most of the time it is always the same
+                    data: '{"userName":"' + $("#usernameInput").val() + '","password":"' + $("#passwordInput").val() + '"}', ---> data to post 
+                    dataType: "html",  ---------------------> TYPE of data to get from the action method mentioned in url
+                    success: function (result, status, xhr) { ------>If everything is OK then it will come to success 
+                        $("#dataDiv").html(result);  
+                    },  
+                    error: function (xhr, status, error) {  ---------->In case of any issues
+                        $("#dataDiv").html("Result: " + status + " " + error + " " + xhr.status + " " + xhr.statusText)  
+                    }  
+                });  
+
+		
+$.get	---->Loads data from a server using an AJAX HTTP GET request.(syntax same as $.ajax But use to get the data only)		
+$.post	---->Loads data from a server using an AJAX HTTP POST request.(syntax same as $.ajax But use to posy the data only)		
+$.getJson ---->Use to get json same as ajax (For more information visit this link:- https://www.tutorialspoint.com/jquery/ajax-jquery-getjson.htm)			
+			
+if we add index.aspx and index.cshtml then which one will first call			
+
+(answer is index.aspx because complier first search for .aspx file)
+			
+			
+Display for			
+editorfor			
+hiddenfor			
+dropdownlist			
+			
+wht is bundling  ---->https://www.tutorialsteacher.com/mvc/bundling-and-minification-in-asp.net-mvc	
+merge all the file in single bundle, bundle helps us to get all the files in single request
+other wise it needs to call multiple servers request to load each and every file.	
+
+how to create bundle
+
+using System.Web;
+using System.Web.Optimization;
+
+public class BundleConfig
+{
+    public static void RegisterBundles(BundleCollection bundles)
+    {   
+        bundles.Add(new ScriptBundle("~/bundles/bs-jq-bundle").Include(
+                      "~/Scripts/bootstrap.js",
+                      "~/Scripts/jquery-3.3.1.js"));
+
+        //the following creates bundles in debug mode;
+        //BundleTable.EnableOptimizations = true;
+    }
+} 
+
+//Global.ascx
+protected void Application_Start()
+{
+    AreaRegistration.RegisterAllAreas();
+    RouteConfig.RegisterRoutes(RouteTable.Routes);
+    BundleConfig.RegisterBundles(BundleTable.Bundles);
+}
+		
+wht is minification --->https://www.tutorialsteacher.com/mvc/bundling-and-minification-in-asp.net-mvc			
+it removes the unwanted space in javascript file 
+for minification we need to use some extension or do online minificaiton converter			
+			
+			
+radiobutton			
+checkboxlist			
+listbox			
+			
+			
+how to redirect to new tab by using Url datatype or UIHint (part 42)--https://www.youtube.com/watch?v=2p7neX8nEXQ&ab_channel=kudvenkat
+Create folder under shared folder as DisplayTemplate and inside this folder add Url.cshtml
+ under which <a href="@ViewData.Model" target="_blank">
+
+			
+types of templates parts 44 (Or visit on this link :- https://www.codeguru.com/csharp/.net/net_asp/mvc/using-display-templates-and-editor-templates-in-asp.net-mvc.htm)			
+1.display templates.(DISPLAY,DISPLAYFOR,DISPLAYFORMODEL)			
+2.editor templates.(EDITOR,EDITORFOR,EDITORFORMODEL)			
+			
+DIFF between displayfor and labelfor
+-->
+LabelFor is to show the name of a property (and clicking the name should set focus to the corresponding field).
+DisplayFor is to show the value of a property
+
+[Display("Name:")]
+public string Name{get;set;}
+
+@Html.DisplayFor(m=m>m.Name)// this will show (read only) "Mohammad"
+@HTML.LabelFor(m=>m.Name)// this will show "Name:"
+
+
+Customtemplate -Part45	
+		
+Need for customtemplate			
+if suppose we use editformodel 			
+and there is one property of datetime			
+but editorformodel will create a normal textbox			
+we want to have a datetime control so that user can select date.			
+Hence to do that we have to use custom template for datetime.			
+			
+How to make custom html helpers in mvc - part 48 *
+
+
+
+public static class CustomHtmlHelpers
+{
+    public static IHtmlString Image(this HtmlHelper helper, string src, string alt)
+    {
+        // Build IMG tag
+        TagBuilder tb = new TagBuilder("img");
+        // Add "src" attribute
+        tb.Attributes.Add("src", VirtualPathUtility.ToAbsolute(src));
+        // Add "alt" attribute
+        tb.Attributes.Add("alt", alt);
+        // return MvcHtmlString. This class implements IHtmlString
+        // interface. IHtmlStrings will not be html encoded.
+        return new MvcHtmlString(tb.ToString(TagRenderMode.SelfClosing));
+    }
+}
+
+			
+wht is Partial view	---->part 52(it is like USER-CONTROL in asp.net) 		
+			
+wht is layout 		---->Part 59(It is like Master page in asp.net)			
+			
+wht is viewstart	---->part 60 (If there are more than one master page than a default master page can be defined in viewstart)		
+			
+diff between @html.partial and @html.renderpartial ----> part 53(partial return value but render partial return void)				
+			
+wht is ajax
+
+HTML.beginform vs ajax.beginform(YOUTUBE:- ASP.NET MVC: Html.BeginForm() VS Ajax.BeginForm() )			
+
+
+MVC Version Diff
+-----------------
+MVC 2
+Client side validtion
+Areas
+Html.validationsummary
+MVC 3
+Razor
+MVC 4
+New mobile project template
+web api
+MVC 5 
+Attribute based routing
+Bootstrp in mvc template
+
+
+If there are 100 divs with different ID's than how to get those div's who's id start from "ab" using jquery
+$('div[id^="ab"]')
+
+
+
+What is Clickjacking?-->youtube -->https://www.youtube.com/watch?v=Pdc5KJfOQpI
+How to prevent it
+Diff between HTTP and HTTPS and SSL -->SSL, TLS, HTTP, HTTPS Explained
+
+https://stackoverflow.com/questions/16484293/adding-x-frame-options-header-to-all-pages-in-mvc-4-application/22105445
+
+
+Difference between Error and Exception
+-------------------------------------------
+url:- https://www.youtube.com/watch?v=cJrM4BRHgu8&ab_channel=EasyEngineeringClasses
+url:-https://pediaa.com/what-is-the-difference-between-error-and-exception-in-c/
+Errors:
+
+Errors are unexpected issues that may arise during computer program execution.
+Errors cannot be handled.
+All Errors are exceptions.
+Termination of program will happen and cannot be handle
+Exceptions:
+
+Exceptions are unexpected events that may arise during run-time.
+Exceptions can be handled using try-catch mechanisms.
+All exceptions are not errors
+Terminaiton of program can be avoided using try catch block
+
+
+what will be the output of
+console.log('a'+1+1); ---> a11
+console.log(1+1+'a'); --->2a
+
+---HttpPostedFileBase -- action method
+
+---new { enctype = "multipart/form-data" } in view under html.beginform
+how to pass a file form ajax to action method
+
+
+How to convert json file to c# file
+1.Copy the json content
+2.open c# file in visual studio
+3.in Edit ---> Paste Special ---> Paste JSON as class
+
+how to convert c# object to json and vice versa
+
+JSON.SerializeObject(c#Obj)---> convert obj to json
+JSON.DeserializeObject<objclass>(jsonObj);
+
+what is Design Pattern
+
+Design Pattern vs Architetural pattern
+
+Desing pattern is at code level  Factory, iterator, Singleton it basically time tested practices of OOP  problems
+Architecture pattern is like at block level e.g MVVM , MVC  block design
+
+Desing Pattern is divided into three
+1.Creational:- deals with object creation and initialization
+e.g:-singleton, factory, abstract factory
+Factory pattern:- https://www.youtube.com/watch?v=YGGg9ecy0K4&list=PL6n9fhu94yhUbctIoxoVTrklN3LMwTCmd&index=2
+
+2.Structural:-This pattern is focuses on decoupling interface and implementation of classes
+e.g :- adapter and bridge
+adapter:- https://www.youtube.com/watch?v=BMfc_oPwp3U&list=RDCMUCCTVrRB5KpIiK6V2GGVsR1Q&start_radio=1&rv=BMfc_oPwp3U&t=3
+
+3.Behavioural
+this deals between communication between classes and objects
+
+
+What is diff between equal and ==  --->https://www.geeksforgeeks.org/difference-equals-method-java/
+
+how to find whether two objects are equal or not ---->https://stackoverflow.com/questions/6413108/how-do-i-check-if-two-objects-are-equal-in-terms-of-their-properties-only-withou
+
+how to make web api open on internet
+1. Enable cors 
+2. No Authentication our the web api
+
+
+What is Lazy Loading ---> loading on demand
+https://www.youtube.com/watch?v=2SrfdAkwmFo
+
+.Net core CLI----> it is use to create, build, publish package, visual studio 
+internally use CLI to restore and publish the application
+CLR :- CLI is under CLR and use to convert c# to machine code
+also use to automatically call grabage collector
+
+what is coalesce function in sql--->https://www.sqlshack.com/using-the-sql-coalesce-function-in-sql-server/#:~:text=The%20SQL%20Coalesce%20and%20IsNull%20functions%20are%20used%20to%20handle%20NULL%20values.&text=The%20SQL%20Coalesce%20function%20evaluates,from%20the%20defined%20argument%20list.
+
+
+what is recurecive stored procedure
+procedure which call itself until a condition is satisfied
+
+different between varchar and nvarchar
+size of nvarchar is larger than varchar
+
+types of subquires--->https://data-flair.training/blogs/sql-subquery/
+single quires
+multiple quires
+
+difference between setTimeOut and setInternval
+setTimeOut --- runs only once and after the time interval
+setInterval -- runs repeatedly after every interval
+
+
+how to avoid multiple hit on submit button
+---
+
+what is ORM
+
+entity framework
+
+is async is required for for await and task?
+
+enityt frame work quotestion
+
+what is content negotation--> xmlformatter,jsonformatter in webapiconfig
+-->content negoatation means webapi will accept request in which formate
+and accepts in which formate like xml,json--https://www.youtube.com/watch?v=ePIcg120ehw
+
+
+can we have enitityframework edmx file in .net core.
+--https://stackoverflow.com/questions/39600602/where-is-the-edmx#:~:text=There%20is%20no%20edmx%20support,behind%20the%20framework%20development%20currently.
+21
+
+There is no edmx support in Entity Framework Core.
+ It only supports a code-first approach.
+ The option to add a new Entity Data Model will be added,
+ but it will produce entity class files instead of an edmx file.
+ The tooling development is a little bit behind the framework development currently.
+
+
+default return type of wbapi.---> By default Web API returns result in XML format
+
+app.use vs app.run--->https://www.talkingdotnet.com/app-use-vs-app-run-asp-net-core-middleware/
+app.Use may call next middleware component in the pipeline. On the other hand, middlware defined using app.Run will never call subsequent middleware. 
+
+difference between private constructor and static constructor.
+Private Constructor:- https://www.c-sharpcorner.com/article/private-constructor-c-sharp/
+static constructor :-https://www.tutorialspoint.com/what-is-the-use-of-static-constructors-in-chash
+we can have only one static constructor
+
+how do you handle versioning in webapi.
+
+Anonoymous method in c#:-  https://www.tutorialsteacher.com/csharp/csharp-anonymous-method
+
+can we have multiple await in a async method?
+if yes then if one await takes 2 secs than 
+if there is three awaits then in total how much
+time will it take to complete
+
+
+how to apply attribute routing ?
+public class RouteConfig
+{
+    public static void RegisterRoutes(RouteCollection routes)
+    {
+        routes.IgnoreRoute(“{resource}.axd/{*pathInfo}”);
+ 
+        routes.MapMvcAttributeRoutes();---> need to use this line to apply attribute routing
+    }
+}
+
+
+
+
+--Mvc With Webapi
+-----------------------------
+MVC which consume webapi
+E:\VIVEK\MVC\MVC-WITH-WEBAPI\MVC-WITH-WEBAPI
+
+Webapi:-E:\VIVEK\MVC Core\Web Api Core\JWTWebTokenWebApiCore
+-----------------------------
+
+
+
+If one method has 3 await then if one await waits for 2 seconds
+then whats the total time-->E:\VIVEK\MVC Core\LELOEcommerce\LELOEcommerce
+it will take 6 secs 
+Return type of async method must be a task
+and when used await we must use async
+
+
+Where the session is stored
+INproc and outproc
+Inproc :- session is stored in same webserver where the application is running
+InProc session state mode is store objects in the AppDomain of the Web application
+OutProc:- session is stored in diff webserver 
+
+
+Security level questions in MVC
+
+can we apply extension method in sealed class?:--Yes
+
+connected and disconnected architecture?
+Datset is disconnected and datareader is connected:-https://www.c-sharpcorner.com/UploadFile/8a67c0/connected-vs-disconnected-architecture-in-C-Sharp/
+
+
+webapi methods return type :-https://docs.microsoft.com/en-us/aspnet/web-api/overview/getting-started-with-aspnet-web-api/action-results
+IHttpActionResult vs HttpResponseMessage:- https://www.youtube.com/watch?v=cNR7gDPJtQI
+
+
+Why Dependency Injection:-https://www.youtube.com/watch?v=FuAhnqSDe-o&ab_channel=.NETInterviewPreparationvideos
+--To make it loosely coupled 
+
+How to download any file
+
+string DocIndex = model[0].DocIndex;
+
+while uploading we upload files in omnidocs and we get an unique docindex for that file
+while downloading we use that docindex and call the omnidocs service to get the response which indeed converted into
+byte formate and below code is used to download file which returns file type as shown below
+
+                    string FileName = model[0].DocName;
+                    string docType = Path.GetExtension(FileName);
+
+                    Byte[] buffer = CacheProvider.DownloadDocument(DocIndex, FileName, Constants.OmniDocsDocumentType.GHI);
+
+
+                    if (buffer != null)
+                    {
+                        Response.ClearContent();
+                        Response.ClearHeaders();
+                        Response.AddHeader("Content-Disposition", "inline; filename=" + FileName);
+                        Response.ContentType = "application/" + docType;
+                        Response.OutputStream.Write(buffer, 0, buffer.Length);
+                        Response.OutputStream.Flush();
+                        Response.OutputStream.Close();
+                        Response.End();
+                    }
+
+                    return File(buffer, Response.ContentType);
+
+Difference between dispose and finalize method
+
+
+how to update entity framework in DB First Approach if we added a table in Database
+1. Install EF Power Tools.
+2. Right click on  soln and select reverse engg.

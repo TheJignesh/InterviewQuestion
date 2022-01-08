@@ -1,0 +1,136 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+    New Contact
+</button>
+
+<br />
+<div class="row">
+    <div class="col-md-6">
+        <h2>Contact List</h2>
+        <table class="table" id="tblContactList">
+            <tr>
+                <th>
+                    FirstName
+                </th>
+                <th>
+                    Email
+                </th>
+                <th>
+                    Phone
+                </th>
+                <th>
+
+                </th>
+                <th>
+
+                </th>
+                <th>
+
+                </th>
+                <th>
+
+                </th>
+                <th></th>
+            </tr>
+
+        </table>
+    </div>
+    <div class="col-md-6">
+        <h2>Favourite List</h2>
+        <table class="table" id="tblFavouriteList">
+            <tr>
+                <th>
+                    FirstName
+                </th>
+                <th>
+                    Email
+                </th>
+                <th>
+                    Phone
+                </th>
+                <th>
+
+                </th>
+                <th>
+
+                </th>
+                <th>
+
+                </th>
+                <th>
+
+                </th>
+                <th></th>
+            </tr>
+
+        </table>
+    </div>
+</div>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Add New Contact</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="row">
+
+                    </div>
+                    <div class="form-group">
+                        <label class="col-form-label">FirstName:</label>
+                        <input type="text" class="form-control" id="txtFirstName">
+                    </div>
+                    <div class="form-group">
+                        <label class="col-form-label">LastName:</label>
+                        <input type="text" class="form-control" id="txtLastName">
+                    </div>
+                    <div class="form-group">
+                        <label class="col-form-label">Email:</label>
+                        <input type="text" class="form-control" id="txtEmail">
+                    </div>
+                    <div class="form-group">
+                        <label class="col-form-label">UserName:</label>
+                        <input type="text" class="form-control" id="txtUserName">
+                    </div>
+                    <div class="form-group">
+                        <label class="col-form-label">Password:</label>
+                        <input type="password" class="form-control" id="txtPassword">
+                    </div>
+                    <div class="form-group">
+                        <label class="col-form-label">Confirm Password:</label>
+                        <input type="password" class="form-control" id="txtConfirmPassword">
+                    </div>
+                    <div class="form-group">
+                        <label class="col-form-label">PhoneNo:</label>
+                        <input type="text" class="form-control" id="txtPhoneNo">
+                    </div>
+                    <div class="form-group">
+                        <label class="col-form-label">Address:</label>
+                        <textarea class="form-control" id="txtAddress"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-form-label text-danger" id="lblValidation"></label>
+                        <label class="col-form-label text-danger" id="lblEmailValidation"></label><br />
+                        <label class="col-form-label text-danger" id="lblPasswordValidation"></label><br />
+                    </div>
+                </form>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="btnSaveContact">Save</button>
+                </div>
+            </div>
+    </div>
+</div>
